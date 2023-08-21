@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+    </head>
+<body>
+    <center>
+    <p class="head">Rock Paper Scissors</p>
+    <p><button onclick="
+    play_game('rock') "><img src="rock-emoji.png" alt="noimg" class="img"></button> <!--calling the function play_game-->
+    <button onclick="
+    play_game('paper')"><img src="paper-emoji.png" alt="noimg" class="img"></button>
+    <button onclick="
+    play_game('scissor')"><img src="scissor-emoji.png" alt="noimg" class="img"></button>
+
+    <p class="score_js"></p>
+    <p class="p1 result" ></p>
+    <p class="p2"></p>
+
+    <button class="reset"onclick="
+    score.Wins = 0;
+    score.Ties = 0;
+    score.Losses = 0;
+    document.querySelector('.p1').innerText = ''; //empty the paragraph once the reset button is pressed
+    document.querySelector('.p2').innerText = ''; // same as above
+     update_score(); //for displaying the score on the screen
+    localStorage.removeItem('score');//removing score from the local storage
+    ">Reset Score</button> <!--pressing reset score -->
+</p>
+    <script src="script.js"></script>
+    </center>
+    
+</body>
+
+</html>
