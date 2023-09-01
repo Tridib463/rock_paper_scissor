@@ -30,6 +30,30 @@ function pickComputerMove()//function in javascript //returning a string
         return 'scissor';
     }
 }
+
+
+let isautoplaying = false;
+let intervalid;
+
+function autoplay() 
+{
+    if(!isautoplaying)
+    {
+        intervalid = setInterval(()=>{
+            const playerMove = pickComputerMove();
+            play_game(playerMove);
+        },1000)
+    isautoplaying = true;
+    }
+    else
+    {
+        clearInterval(intervalid);
+        isautoplaying = false;
+    }
+}
+
+document.querySelector('.auto').addEventListener('click',autoplay);
+
 function play_game(player_move)//function with parameter 
 {
     const ComputerMove = pickComputerMove();//calling the function pickcomputermove() 

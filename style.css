@@ -42,7 +42,8 @@ body
 {
     height: 80px;
 }
-.reset
+.reset,
+.auto
 {
     background-color: white;
     border: none;
