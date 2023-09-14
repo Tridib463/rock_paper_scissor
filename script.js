@@ -39,6 +39,7 @@ function autoplay()
 {
     if(!isautoplaying)
     {
+        document.querySelector('.auto').innerText = "Stop Auto-Play";
         intervalid = setInterval(()=>{
             const playerMove = pickComputerMove();
             play_game(playerMove);
@@ -47,6 +48,7 @@ function autoplay()
     }
     else
     {
+        document.querySelector('.auto').innerText = "Auto-Play";
         clearInterval(intervalid);
         isautoplaying = false;
     }
